@@ -13,3 +13,4 @@ packages/
 *.vspscc
 *.dbmdl
 .vs
+TestResults

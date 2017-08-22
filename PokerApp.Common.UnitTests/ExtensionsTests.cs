@@ -10,7 +10,7 @@ namespace PokerApp.Common.UnitTests
     public class ExtensionsTests
     {
         #region IsStraight
-
+        
         [TestMethod]
         public void Extensions_IsStraight_False()
         {
@@ -19,7 +19,7 @@ namespace PokerApp.Common.UnitTests
 
             result.Should().Be(false);
         }
-
+        
         [TestMethod]
         public void Extensions_IsStraight_True()
         {
@@ -32,7 +32,7 @@ namespace PokerApp.Common.UnitTests
         #endregion
 
         #region IsFlush
-
+        
         [TestMethod]
         public void Extensions_IsFlush_False()
         {
@@ -41,7 +41,7 @@ namespace PokerApp.Common.UnitTests
 
             result.Should().Be(false);
         }
-
+        
         [TestMethod]
         public void Extensions_IsFlush_True()
         {
@@ -54,7 +54,7 @@ namespace PokerApp.Common.UnitTests
         #endregion
 
         #region IsOnePair
-
+        
         [TestMethod]
         public void Extensions_IsOnePair_False()
         {
@@ -63,7 +63,7 @@ namespace PokerApp.Common.UnitTests
 
             result.Should().Be(false);
         }
-
+        
         [TestMethod]
         public void Extensions_IsOnePair_True()
         {
@@ -76,7 +76,7 @@ namespace PokerApp.Common.UnitTests
         #endregion
 
         #region IsStraightFlush
-
+        
         [TestMethod]
         public void Extensions_IsStraightFlush_IsFlush_ButNotStraightFlush()
         {
@@ -85,7 +85,7 @@ namespace PokerApp.Common.UnitTests
 
             result.Should().Be(false);
         }
-
+        
         [TestMethod]
         public void Extensions_IsStraightFlush_IsStright_ButNotStraightFlush()
         {
@@ -94,7 +94,7 @@ namespace PokerApp.Common.UnitTests
 
             result.Should().Be(false);
         }
-
+        
         [TestMethod]
         public void Extensions_IsStraightFlusht_True()
         {

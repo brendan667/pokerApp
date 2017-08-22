@@ -15,6 +15,11 @@ namespace PokerApp.Common.Models
         public Hand(Card[] cards)
         {
             Cards = cards;
+            if (IsBothCardsSet)
+            {
+                Sort();
+                RankingHand();
+            }
         }
 
         public Hand()
@@ -45,11 +50,11 @@ namespace PokerApp.Common.Models
                 Cards[1] = card;
             }
             
-            if(Cards[1] != null)
+            if(IsBothCardsSet)
             {
                 Sort();
                 RankingHand();
-            }   
+            }
         }
 
         public void RankingHand()
@@ -85,6 +90,8 @@ namespace PokerApp.Common.Models
         
         public Card HighCard => Cards.GroupBy(x => x.Rank, y => y).OrderByDescending(x => x.Key).Select(x => x).First().First();
 
-        public Card LowCard => Cards.GroupBy(x => x.Rank, y => y).OrderByDescending(x => x.Key).Select(x => x).Last().First();
+        //public Card LowCard => Cards.GroupBy(x => x.Rank, y => y).OrderByDescending(x => x.Key).Select(x => x).Last().First();
+
+        private bool IsBothCardsSet => Cards[0] != null && Cards[1] != null;
     }
 }

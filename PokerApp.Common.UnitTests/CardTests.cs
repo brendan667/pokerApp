@@ -17,7 +17,7 @@ namespace PokerApp.Common.UnitTests
 
             toString.Should().Be("Ace of Clubs");
         }
-
+        
         [TestMethod]
         public void Card_Compare()
         {
@@ -31,7 +31,7 @@ namespace PokerApp.Common.UnitTests
             hand.Cards.First().Should().Be(lowCard);
             hand.Cards.Last().Should().Be(highCard);
         }
-
+        
         [TestMethod]
         public void Card_Compare_MoreThan2Cards()
         {

@@ -41,7 +41,7 @@ namespace PokerApp.Common.UnitTests
             }
             listOfFullToStrings.Distinct().Count().Should().Be(100000);
         }
-
+        
         [TestMethod]
         public void Deck_DealCard()
         {

@@ -1,0 +1,15 @@
+bin
+obj
+*.user
+*.ncrunchsolution
+*.ncrunchproject
+*.suo
+.dropbox.attr
+*.log
+src/_NCrunch_Translations/
+packages/
+*.ccproj
+*.ccproj/vspscc
+*.vspscc
+*.dbmdl
+.vs
